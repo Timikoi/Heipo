@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heipo Orq — Intelligence Artificielle</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #030303;
+            color: white;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #4da6ff;
+        }
+
+        nav a {
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .hero {
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #004080, #000000);
+            animation: pulse 6s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { background: radial-gradient(circle at center, #003366, #000000); }
+            100% { background: radial-gradient(circle at center, #0055aa, #000000); }
+        }
+
+        .hero h1 {
+            font-size: 70px;
+            margin: 0;
+            text-shadow: 0 0 25px #4da6ff;
+            letter-spacing: 3px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-top: 10px;
+            opacity: 0.8;
+            max-width: 700px;
+        }
+
+        .core {
+            margin: 60px auto;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .core h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px #4da6ff;
+        }
+
+        .core p {
+            font-size: 20px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .demo {
+            margin-top: 50px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .demo input {
+            width: 80%;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        .demo button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background: #4da6ff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .demo button:hover {
+            background: white;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding: 20px;
+            text-align: center;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">HEIPO</div>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="heipoos.html">HeipoOS</a>
+        <a href="heipodevices.html">HeipoDevices</a>
+        <a href="heipocod.html">HeipoCod</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Heipo Orq</h1>
+    <p>L’intelligence Artificielle pas comme les autres.  
+    Une IA conçue pour comprendre, anticiper et créer l’avenir.</p>
+</section>
+
+<section class="core">
+    <h2>Une IA Vivante</h2>
+    <p>
+        Orq n’est pas une IA ordinaire.  
+        C’est une entité évolutive, capable d’apprendre, de raisonner  
+        et d’orchestrer l’ensemble de l’écosystème Heipo.
+        <br><br>
+        Connectée à HeipoOS, Heipo4PC, HeipoPhone, HeipoEyeConnect  
+        et au HeipoCeter Command, Orq est le cerveau du futur.
+    </p>
+
+    <div class="demo">
+        <h3>Interface Orq</h3>
+        <input type="text" placeholder="Interroge l’IA Orq…">
+        <br>
+        <button>Envoyer</button>
+    </div>
+</section>
+
+<footer>
+    © 2026 Heipo Corporation — Leiv and Orq
+</footer>
+
+</body>
+</html>
