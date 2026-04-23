@@ -2,168 +2,114 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heipo Orq — Intelligence Artificielle</title>
-
+    <title>HeipoAI – Orq</title>
     <style>
         body {
+            background: #0a0a0f;
+            color: #00eaff;
+            font-family: "Consolas", monospace;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #030303;
-            color: white;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
         }
 
         header {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
+            background: #11111a;
             padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-        }
-
-        .logo {
+            text-align: center;
             font-size: 28px;
-            font-weight: bold;
-            color: #4da6ff;
-        }
-
-        nav a {
-            margin-left: 20px;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        .hero {
-            height: 85vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: radial-gradient(circle at center, #004080, #000000);
-            animation: pulse 6s infinite alternate;
-        }
-
-        @keyframes pulse {
-            0% { background: radial-gradient(circle at center, #003366, #000000); }
-            100% { background: radial-gradient(circle at center, #0055aa, #000000); }
-        }
-
-        .hero h1 {
-            font-size: 70px;
-            margin: 0;
-            text-shadow: 0 0 25px #4da6ff;
             letter-spacing: 3px;
+            border-bottom: 2px solid #00eaff;
         }
 
-        .hero p {
-            font-size: 22px;
-            margin-top: 10px;
-            opacity: 0.8;
-            max-width: 700px;
+        #console {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            font-size: 18px;
+            line-height: 1.5;
         }
 
-        .core {
-            margin: 60px auto;
-            max-width: 900px;
-            text-align: center;
-        }
-
-        .core h2 {
-            font-size: 40px;
-            margin-bottom: 20px;
-            text-shadow: 0 0 15px #4da6ff;
-        }
-
-        .core p {
-            font-size: 20px;
-            opacity: 0.8;
-            line-height: 1.6;
-        }
-
-        .demo {
-            margin-top: 50px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        .demo input {
-            width: 80%;
+        #inputZone {
+            display: flex;
             padding: 15px;
-            font-size: 18px;
-            border-radius: 10px;
-            border: none;
-            margin-bottom: 20px;
+            background: #11111a;
+            border-top: 2px solid #00eaff;
         }
 
-        .demo button {
-            padding: 15px 30px;
+        #userInput {
+            flex: 1;
+            padding: 10px;
+            background: #0f0f17;
+            border: 1px solid #00eaff;
+            color: #00eaff;
             font-size: 18px;
-            background: #4da6ff;
+        }
+
+        #sendBtn {
+            padding: 10px 20px;
+            margin-left: 10px;
+            background: #00eaff;
+            color: #000;
             border: none;
-            border-radius: 10px;
+            font-weight: bold;
             cursor: pointer;
         }
 
-        .demo button:hover {
-            background: white;
-        }
-
-        footer {
-            margin-top: 80px;
-            padding: 20px;
-            text-align: center;
-            opacity: 0.5;
+        #sendBtn:hover {
+            background: #00bcd4;
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">HEIPO</div>
-    <nav>
-        <a href="index.html">Accueil</a>
-        <a href="heipoos.html">HeipoOS</a>
-        <a href="heipodevices.html">HeipoDevices</a>
-        <a href="heipocod.html">HeipoCod</a>
-    </nav>
-</header>
+<header>HEIPOAI : ORQ</header>
 
-<section class="hero">
-    <h1>Heipo Orq</h1>
-    <p>L’intelligence Artificielle pas comme les autres.  
-    Une IA conçue pour comprendre, anticiper et créer l’avenir.</p>
-</section>
+<div id="console">
+    <p><strong>Orq :</strong> Système initialisé. En attente d’une commande Heipo…</p>
+</div>
 
-<section class="core">
-    <h2>Une IA Vivante</h2>
-    <p>
-        Orq n’est pas une IA ordinaire.  
-        C’est une entité évolutive, capable d’apprendre, de raisonner  
-        et d’orchestrer l’ensemble de l’écosystème Heipo.
-        <br><br>
-        Connectée à HeipoOS, Heipo4PC, HeipoPhone, HeipoEyeConnect  
-        et au HeipoCeter Command, Orq est le cerveau du futur.
-    </p>
+<div id="inputZone">
+    <input type="text" id="userInput" placeholder="Écris une commande pour Orq…">
+    <button id="sendBtn">Envoyer</button>
+</div>
 
-    <div class="demo">
-        <h3>Interface Orq</h3>
-        <input type="text" placeholder="Interroge l’IA Orq…">
-        <br>
-        <button>Envoyer</button>
-    </div>
-</section>
+<script>
+    const consoleDiv = document.getElementById("console");
+    const input = document.getElementById("userInput");
+    const btn = document.getElementById("sendBtn");
 
-<footer>
-    © 2026 Heipo Corporation — Leiv and Orq
-</footer>
+    function sendToOrq() {
+        const text = input.value.trim();
+        if (text === "") return;
+
+        consoleDiv.innerHTML += `<p><strong>Toi :</strong> ${text}</p>`;
+
+        // Réponse simulée d'Orq
+        let response = "Analyse en cours…";
+
+        if (text.toLowerCase().includes("bonjour")) {
+            response = "Bonjour humain. Je suis Orq, l’IA du Heipo Empire.";
+        } else if (text.toLowerCase().includes("heipocod")) {
+            response = "HeipoCod HEX détecté. Conversion possible.";
+        } else if (text.toLowerCase().includes("orq")) {
+            response = "Je suis opérationnel.";
+        }
+
+        consoleDiv.innerHTML += `<p><strong>Orq :</strong> ${response}</p>`;
+        consoleDiv.scrollTop = consoleDiv.scrollHeight;
+
+        input.value = "";
+    }
+
+    btn.onclick = sendToOrq;
+    input.addEventListener("keydown", e => {
+        if (e.key === "Enter") sendToOrq();
+    });
+</script>
 
 </body>
 </html>
